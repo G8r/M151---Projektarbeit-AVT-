@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AbsenzenDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Absenz">
+          <Key>
+            <PropertyRef Name="absenz_id" />
+          </Key>
+          <Property Name="absenz_id" Type="int" Nullable="false" />
+          <Property Name="Datum" Type="date" Nullable="false" />
+          <Property Name="Lektionen" Type="float" Nullable="false" />
+          <Property Name="modul_id" Type="int" />
+          <Property Name="schueler_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Klasse">
+          <Key>
+            <PropertyRef Name="klasse_id" />
+          </Key>
+          <Property Name="klasse_id" Type="int" Nullable="false" />
+          <Property Name="Bezeichnung" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <!--Während der Generierung sind Fehler aufgetreten:
+Warnung 6002: Für Tabelle/Sicht 'AbsenzenDB.dbo.Klasse_Lehrer' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
+        <EntityType Name="Klasse_Lehrer">
+          <Key>
+            <PropertyRef Name="lehrer_id" />
+            <PropertyRef Name="klasse_id" />
+          </Key>
+          <Property Name="lehrer_id" Type="int" Nullable="false" />
+          <Property Name="klasse_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lehrer">
+          <Key>
+            <PropertyRef Name="lehrer_id" />
+          </Key>
+          <Property Name="lehrer_id" Type="int" Nullable="false" />
+          <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Modul">
+          <Key>
+            <PropertyRef Name="modul_id" />
+          </Key>
+          <Property Name="modul_id" Type="int" Nullable="false" />
+          <Property Name="Bezeichnung" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="lehrer_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Schueler">
+          <Key>
+            <PropertyRef Name="schueler_id" />
+          </Key>
+          <Property Name="schueler_id" Type="int" Nullable="false" StoreGeneratedPattern="None" />
+          <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="klasse_id" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Absenz_Modul">
+          <End Role="Modul" Type="Self.Modul" Multiplicity="0..1" />
+          <End Role="Absenz" Type="Self.Absenz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modul">
+              <PropertyRef Name="modul_id" />
+            </Principal>
+            <Dependent Role="Absenz">
+              <PropertyRef Name="modul_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Absenz_Schueler">
+          <End Role="Schueler" Type="Self.Schueler" Multiplicity="0..1" />
+          <End Role="Absenz" Type="Self.Absenz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schueler">
+              <PropertyRef Name="schueler_id" />
+            </Principal>
+            <Dependent Role="Absenz">
+              <PropertyRef Name="schueler_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Klasse">
+          <End Role="Klasse" Type="Self.Klasse" Multiplicity="1" />
+          <End Role="Klasse_Lehrer" Type="Self.Klasse_Lehrer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klasse">
+              <PropertyRef Name="klasse_id" />
+            </Principal>
+            <Dependent Role="Klasse_Lehrer">
+              <PropertyRef Name="klasse_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lehrer">
+          <End Role="Lehrer" Type="Self.Lehrer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Klasse_Lehrer" Type="Self.Klasse_Lehrer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lehrer">
+              <PropertyRef Name="lehrer_id" />
+            </Principal>
+            <Dependent Role="Klasse_Lehrer">
+              <PropertyRef Name="lehrer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Modul_Lehrer">
+          <End Role="Lehrer" Type="Self.Lehrer" Multiplicity="1" />
+          <End Role="Modul" Type="Self.Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lehrer">
+              <PropertyRef Name="lehrer_id" />
+            </Principal>
+            <Dependent Role="Modul">
+              <PropertyRef Name="lehrer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Schueler_Klasse">
+          <End Role="Klasse" Type="Self.Klasse" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Schueler" Type="Self.Schueler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klasse">
+              <PropertyRef Name="klasse_id" />
+            </Principal>
+            <Dependent Role="Schueler">
+              <PropertyRef Name="klasse_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AbsenzenDBModelStoreContainer">
+          <EntitySet Name="Absenz" EntityType="Self.Absenz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Klasse" EntityType="Self.Klasse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lehrer" EntityType="Self.Lehrer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Modul" EntityType="Self.Modul" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schueler" EntityType="Self.Schueler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Klasse_Lehrer" EntityType="Self.Klasse_Lehrer" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Klasse_Lehrer].[lehrer_id] AS [lehrer_id], 
+    [Klasse_Lehrer].[klasse_id] AS [klasse_id]
+    FROM [dbo].[Klasse_Lehrer] AS [Klasse_Lehrer]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Absenz_Modul" Association="Self.FK_Absenz_Modul">
+            <End Role="Modul" EntitySet="Modul" />
+            <End Role="Absenz" EntitySet="Absenz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Absenz_Schueler" Association="Self.FK_Absenz_Schueler">
+            <End Role="Schueler" EntitySet="Schueler" />
+            <End Role="Absenz" EntitySet="Absenz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Klasse" Association="Self.FK_Klasse">
+            <End Role="Klasse" EntitySet="Klasse" />
+            <End Role="Klasse_Lehrer" EntitySet="Klasse_Lehrer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lehrer" Association="Self.FK_Lehrer">
+            <End Role="Lehrer" EntitySet="Lehrer" />
+            <End Role="Klasse_Lehrer" EntitySet="Klasse_Lehrer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Modul_Lehrer" Association="Self.FK_Modul_Lehrer">
+            <End Role="Lehrer" EntitySet="Lehrer" />
+            <End Role="Modul" EntitySet="Modul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schueler_Klasse" Association="Self.FK_Schueler_Klasse">
+            <End Role="Klasse" EntitySet="Klasse" />
+            <End Role="Schueler" EntitySet="Schueler" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AbsenzenDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Absenz">
+          <Key>
+            <PropertyRef Name="absenz_id" />
+          </Key>
+          <Property Name="absenz_id" Type="Int32" Nullable="false" />
+          <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Lektionen" Type="Double" Nullable="false" />
+          <Property Name="modul_id" Type="Int32" />
+          <Property Name="schueler_id" Type="Int32" />
+          <NavigationProperty Name="Modul" Relationship="Self.FK_Absenz_Modul" FromRole="Absenz" ToRole="Modul" />
+          <NavigationProperty Name="Schueler" Relationship="Self.FK_Absenz_Schueler" FromRole="Absenz" ToRole="Schueler" />
+        </EntityType>
+        <EntityType Name="Klasse">
+          <Key>
+            <PropertyRef Name="klasse_id" />
+          </Key>
+          <Property Name="klasse_id" Type="Int32" Nullable="false" />
+          <Property Name="Bezeichnung" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Schuelers" Relationship="Self.FK_Schueler_Klasse" FromRole="Klasse" ToRole="Schueler" />
+          <NavigationProperty Name="Lehrers" Relationship="Self.Klasse_Lehrer" FromRole="Klasse" ToRole="Lehrer" />
+        </EntityType>
+        <EntityType Name="Lehrer">
+          <Key>
+            <PropertyRef Name="lehrer_id" />
+          </Key>
+          <Property Name="lehrer_id" Type="Int32" Nullable="false" />
+          <Property Name="Vorname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nachname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Moduls" Relationship="Self.FK_Modul_Lehrer" FromRole="Lehrer" ToRole="Modul" />
+          <NavigationProperty Name="Klasses" Relationship="Self.Klasse_Lehrer" FromRole="Lehrer" ToRole="Klasse" />
+        </EntityType>
+        <EntityType Name="Modul">
+          <Key>
+            <PropertyRef Name="modul_id" />
+          </Key>
+          <Property Name="modul_id" Type="Int32" Nullable="false" />
+          <Property Name="Bezeichnung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lehrer_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Absenzs" Relationship="Self.FK_Absenz_Modul" FromRole="Modul" ToRole="Absenz" />
+          <NavigationProperty Name="Lehrer" Relationship="Self.FK_Modul_Lehrer" FromRole="Modul" ToRole="Lehrer" />
+        </EntityType>
+        <EntityType Name="Schueler">
+          <Key>
+            <PropertyRef Name="schueler_id" />
+          </Key>
+          <Property Name="schueler_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="Vorname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nachname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="klasse_id" Type="Int32" />
+          <NavigationProperty Name="Absenzs" Relationship="Self.FK_Absenz_Schueler" FromRole="Schueler" ToRole="Absenz" />
+          <NavigationProperty Name="Klasse" Relationship="Self.FK_Schueler_Klasse" FromRole="Schueler" ToRole="Klasse" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Absenz_Modul">
+          <End Role="Modul" Type="Self.Modul" Multiplicity="0..1" />
+          <End Role="Absenz" Type="Self.Absenz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modul">
+              <PropertyRef Name="modul_id" />
+            </Principal>
+            <Dependent Role="Absenz">
+              <PropertyRef Name="modul_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Absenz_Schueler">
+          <End Role="Schueler" Type="Self.Schueler" Multiplicity="0..1" />
+          <End Role="Absenz" Type="Self.Absenz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schueler">
+              <PropertyRef Name="schueler_id" />
+            </Principal>
+            <Dependent Role="Absenz">
+              <PropertyRef Name="schueler_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Schueler_Klasse">
+          <End Role="Klasse" Type="Self.Klasse" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Schueler" Type="Self.Schueler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klasse">
+              <PropertyRef Name="klasse_id" />
+            </Principal>
+            <Dependent Role="Schueler">
+              <PropertyRef Name="klasse_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Modul_Lehrer">
+          <End Role="Lehrer" Type="Self.Lehrer" Multiplicity="1" />
+          <End Role="Modul" Type="Self.Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lehrer">
+              <PropertyRef Name="lehrer_id" />
+            </Principal>
+            <Dependent Role="Modul">
+              <PropertyRef Name="lehrer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Klasse_Lehrer">
+          <End Role="Klasse" Type="Self.Klasse" Multiplicity="*" />
+          <End Role="Lehrer" Type="Self.Lehrer" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="AbsenzenDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Absenzs" EntityType="Self.Absenz" />
+          <EntitySet Name="Klasses" EntityType="Self.Klasse" />
+          <EntitySet Name="Lehrers" EntityType="Self.Lehrer" />
+          <EntitySet Name="Moduls" EntityType="Self.Modul" />
+          <EntitySet Name="Schuelers" EntityType="Self.Schueler" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_Absenz_Modul" Association="Self.FK_Absenz_Modul">
+            <End Role="Modul" EntitySet="Moduls" />
+            <End Role="Absenz" EntitySet="Absenzs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Absenz_Schueler" Association="Self.FK_Absenz_Schueler">
+            <End Role="Schueler" EntitySet="Schuelers" />
+            <End Role="Absenz" EntitySet="Absenzs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schueler_Klasse" Association="Self.FK_Schueler_Klasse">
+            <End Role="Klasse" EntitySet="Klasses" />
+            <End Role="Schueler" EntitySet="Schuelers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Modul_Lehrer" Association="Self.FK_Modul_Lehrer">
+            <End Role="Lehrer" EntitySet="Lehrers" />
+            <End Role="Modul" EntitySet="Moduls" />
+          </AssociationSet>
+          <AssociationSet Name="Klasse_Lehrer" Association="Self.Klasse_Lehrer">
+            <End Role="Klasse" EntitySet="Klasses" />
+            <End Role="Lehrer" EntitySet="Lehrers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AbsenzenDBModelStoreContainer" CdmEntityContainer="AbsenzenDBEntities">
+          <EntitySetMapping Name="Absenzs">
+            <EntityTypeMapping TypeName="AbsenzenDBModel.Absenz">
+              <MappingFragment StoreEntitySet="Absenz">
+                <ScalarProperty Name="absenz_id" ColumnName="absenz_id" />
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+                <ScalarProperty Name="Lektionen" ColumnName="Lektionen" />
+                <ScalarProperty Name="modul_id" ColumnName="modul_id" />
+                <ScalarProperty Name="schueler_id" ColumnName="schueler_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Klasses">
+            <EntityTypeMapping TypeName="AbsenzenDBModel.Klasse">
+              <MappingFragment StoreEntitySet="Klasse">
+                <ScalarProperty Name="klasse_id" ColumnName="klasse_id" />
+                <ScalarProperty Name="Bezeichnung" ColumnName="Bezeichnung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lehrers">
+            <EntityTypeMapping TypeName="AbsenzenDBModel.Lehrer">
+              <MappingFragment StoreEntitySet="Lehrer">
+                <ScalarProperty Name="lehrer_id" ColumnName="lehrer_id" />
+                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+                <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Moduls">
+            <EntityTypeMapping TypeName="AbsenzenDBModel.Modul">
+              <MappingFragment StoreEntitySet="Modul">
+                <ScalarProperty Name="modul_id" ColumnName="modul_id" />
+                <ScalarProperty Name="Bezeichnung" ColumnName="Bezeichnung" />
+                <ScalarProperty Name="lehrer_id" ColumnName="lehrer_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schuelers">
+            <EntityTypeMapping TypeName="AbsenzenDBModel.Schueler">
+              <MappingFragment StoreEntitySet="Schueler">
+                <ScalarProperty Name="schueler_id" ColumnName="schueler_id" />
+                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+                <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+                <ScalarProperty Name="klasse_id" ColumnName="klasse_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AbsenzenDBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Klasse_Lehrer" TypeName="AbsenzenDBModel.Klasse_Lehrer" StoreEntitySet="Klasse_Lehrer">
+            <EndProperty Name="Klasse">
+              <ScalarProperty Name="klasse_id" ColumnName="klasse_id" />
+            </EndProperty>
+            <EndProperty Name="Lehrer">
+              <ScalarProperty Name="lehrer_id" ColumnName="lehrer_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

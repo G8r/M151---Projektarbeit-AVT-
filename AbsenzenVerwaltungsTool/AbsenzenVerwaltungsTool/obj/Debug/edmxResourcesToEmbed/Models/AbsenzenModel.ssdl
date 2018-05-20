@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AbsenzenDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Absenz">
+    <Key>
+      <PropertyRef Name="absenz_id" />
+    </Key>
+    <Property Name="absenz_id" Type="int" Nullable="false" />
+    <Property Name="Datum" Type="date" Nullable="false" />
+    <Property Name="Lektionen" Type="float" Nullable="false" />
+    <Property Name="modul_id" Type="int" />
+    <Property Name="schueler_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Klasse">
+    <Key>
+      <PropertyRef Name="klasse_id" />
+    </Key>
+    <Property Name="klasse_id" Type="int" Nullable="false" />
+    <Property Name="Bezeichnung" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <!--Während der Generierung sind Fehler aufgetreten:
+Warnung 6002: Für Tabelle/Sicht 'AbsenzenDB.dbo.Klasse_Lehrer' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
+  <EntityType Name="Klasse_Lehrer">
+    <Key>
+      <PropertyRef Name="lehrer_id" />
+      <PropertyRef Name="klasse_id" />
+    </Key>
+    <Property Name="lehrer_id" Type="int" Nullable="false" />
+    <Property Name="klasse_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lehrer">
+    <Key>
+      <PropertyRef Name="lehrer_id" />
+    </Key>
+    <Property Name="lehrer_id" Type="int" Nullable="false" />
+    <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modul">
+    <Key>
+      <PropertyRef Name="modul_id" />
+    </Key>
+    <Property Name="modul_id" Type="int" Nullable="false" />
+    <Property Name="Bezeichnung" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lehrer_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Schueler">
+    <Key>
+      <PropertyRef Name="schueler_id" />
+    </Key>
+    <Property Name="schueler_id" Type="int" Nullable="false" StoreGeneratedPattern="None" />
+    <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="klasse_id" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Absenz_Modul">
+    <End Role="Modul" Type="Self.Modul" Multiplicity="0..1" />
+    <End Role="Absenz" Type="Self.Absenz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modul">
+        <PropertyRef Name="modul_id" />
+      </Principal>
+      <Dependent Role="Absenz">
+        <PropertyRef Name="modul_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Absenz_Schueler">
+    <End Role="Schueler" Type="Self.Schueler" Multiplicity="0..1" />
+    <End Role="Absenz" Type="Self.Absenz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schueler">
+        <PropertyRef Name="schueler_id" />
+      </Principal>
+      <Dependent Role="Absenz">
+        <PropertyRef Name="schueler_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Klasse">
+    <End Role="Klasse" Type="Self.Klasse" Multiplicity="1" />
+    <End Role="Klasse_Lehrer" Type="Self.Klasse_Lehrer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klasse">
+        <PropertyRef Name="klasse_id" />
+      </Principal>
+      <Dependent Role="Klasse_Lehrer">
+        <PropertyRef Name="klasse_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lehrer">
+    <End Role="Lehrer" Type="Self.Lehrer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Klasse_Lehrer" Type="Self.Klasse_Lehrer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lehrer">
+        <PropertyRef Name="lehrer_id" />
+      </Principal>
+      <Dependent Role="Klasse_Lehrer">
+        <PropertyRef Name="lehrer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Modul_Lehrer">
+    <End Role="Lehrer" Type="Self.Lehrer" Multiplicity="1" />
+    <End Role="Modul" Type="Self.Modul" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lehrer">
+        <PropertyRef Name="lehrer_id" />
+      </Principal>
+      <Dependent Role="Modul">
+        <PropertyRef Name="lehrer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schueler_Klasse">
+    <End Role="Klasse" Type="Self.Klasse" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Schueler" Type="Self.Schueler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klasse">
+        <PropertyRef Name="klasse_id" />
+      </Principal>
+      <Dependent Role="Schueler">
+        <PropertyRef Name="klasse_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AbsenzenDBModelStoreContainer">
+    <EntitySet Name="Absenz" EntityType="Self.Absenz" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klasse" EntityType="Self.Klasse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lehrer" EntityType="Self.Lehrer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modul" EntityType="Self.Modul" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schueler" EntityType="Self.Schueler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klasse_Lehrer" EntityType="Self.Klasse_Lehrer" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Klasse_Lehrer].[lehrer_id] AS [lehrer_id], 
+    [Klasse_Lehrer].[klasse_id] AS [klasse_id]
+    FROM [dbo].[Klasse_Lehrer] AS [Klasse_Lehrer]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Absenz_Modul" Association="Self.FK_Absenz_Modul">
+      <End Role="Modul" EntitySet="Modul" />
+      <End Role="Absenz" EntitySet="Absenz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Absenz_Schueler" Association="Self.FK_Absenz_Schueler">
+      <End Role="Schueler" EntitySet="Schueler" />
+      <End Role="Absenz" EntitySet="Absenz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Klasse" Association="Self.FK_Klasse">
+      <End Role="Klasse" EntitySet="Klasse" />
+      <End Role="Klasse_Lehrer" EntitySet="Klasse_Lehrer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lehrer" Association="Self.FK_Lehrer">
+      <End Role="Lehrer" EntitySet="Lehrer" />
+      <End Role="Klasse_Lehrer" EntitySet="Klasse_Lehrer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Modul_Lehrer" Association="Self.FK_Modul_Lehrer">
+      <End Role="Lehrer" EntitySet="Lehrer" />
+      <End Role="Modul" EntitySet="Modul" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schueler_Klasse" Association="Self.FK_Schueler_Klasse">
+      <End Role="Klasse" EntitySet="Klasse" />
+      <End Role="Schueler" EntitySet="Schueler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

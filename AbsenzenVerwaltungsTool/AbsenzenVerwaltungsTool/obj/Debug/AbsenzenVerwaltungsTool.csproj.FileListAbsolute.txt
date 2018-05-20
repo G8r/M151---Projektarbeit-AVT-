@@ -1,0 +1,173 @@
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\ApplicationInsights.config
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csc.exe
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csc.exe.config
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csc.rsp
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csi.exe
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csi.rsp
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.AppContext.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\vbc.exe
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\vbc.exe.config
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\vbc.rsp
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\VBCSCompiler.exe
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\AbsenzenVerwaltungsTool.dll.config
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\AbsenzenVerwaltungsTool.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\AbsenzenVerwaltungsTool.pdb
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Antlr3.Runtime.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\EntityFramework.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\EntityFramework.SqlServer.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.Web.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.ApplicationInsights.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Newtonsoft.Json.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Helpers.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Mvc.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Optimization.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Razor.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.Razor.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\WebGrease.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\EntityFramework.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\EntityFramework.SqlServer.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Helpers.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Mvc.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Optimization.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Razor.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.Razor.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Antlr3.Runtime.pdb
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Newtonsoft.Json.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.ApplicationInsights.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.Web.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\EntityFramework.resources.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.Helpers.resources.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.Mvc.resources.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.Optimization.resources.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.Razor.resources.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.WebPages.resources.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.WebPages.Deployment.resources.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.WebPages.Razor.resources.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\obj\Debug\AbsenzenVerwaltungsTool.csprojResolveAssemblyReference.cache
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\obj\Debug\AbsenzenVerwaltungsTool.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\obj\Debug\AbsenzenVerwaltungsTool.pdb
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Net.Http.Formatting.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Http.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Http.WebHost.dll
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Net.Http.Formatting.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Http.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Http.WebHost.xml
+C:\Users\bbzw\Documents\Visual Studio 2017\Projects\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\EntityFramework.SqlServer.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\ApplicationInsights.config
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csc.exe
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csc.exe.config
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csc.rsp
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csi.exe
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\csi.rsp
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.AppContext.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\vbc.exe
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\vbc.exe.config
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\vbc.rsp
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\VBCSCompiler.exe
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\AbsenzenVerwaltungsTool.dll.config
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\AbsenzenVerwaltungsTool.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\AbsenzenVerwaltungsTool.pdb
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Antlr3.Runtime.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\EntityFramework.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\EntityFramework.SqlServer.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.Web.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Newtonsoft.Json.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Net.Http.Formatting.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Helpers.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Http.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Http.WebHost.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Mvc.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Optimization.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Razor.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.Razor.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\WebGrease.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\EntityFramework.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\EntityFramework.SqlServer.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Net.Http.Formatting.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Http.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Http.WebHost.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Helpers.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Mvc.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Optimization.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.Razor.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\System.Web.WebPages.Razor.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Antlr3.Runtime.pdb
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Newtonsoft.Json.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\Microsoft.AI.Web.xml
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\EntityFramework.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\EntityFramework.SqlServer.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.Helpers.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.Mvc.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.Optimization.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.Razor.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.WebPages.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\bin\de\System.Web.WebPages.Razor.resources.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\obj\Debug\AbsenzenVerwaltungsTool.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\obj\Debug\AbsenzenVerwaltungsTool.csproj.CoreCompileInputs.cache
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\obj\Debug\AbsenzenVerwaltungsTool.dll
+C:\Users\Michael\Desktop\AbsenzenVerwaltungsTool\AbsenzenVerwaltungsTool\obj\Debug\AbsenzenVerwaltungsTool.pdb

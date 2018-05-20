@@ -1,0 +1,55 @@
+﻿@model AbsenzenVerwaltungsTool.Models.Absenz
+
+@{
+    ViewBag.Title = "Absenz löschen";
+}
+
+<h2>Löschen</h2>
+
+<h3>Wollen Sie die Absenz wirklich löschen?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lektionen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lektionen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modul.Bezeichnung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modul.Bezeichnung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Schueler.Vorname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Schueler.Vorname)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Löschen" class="btn btn-default" /> |
+            @Html.ActionLink("Zurück", "Index")
+        </div>
+    }
+</div>

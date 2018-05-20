@@ -1,0 +1,38 @@
+﻿@model AbsenzenVerwaltungsTool.Models.Modul
+
+@{
+    ViewBag.Title = "Modul löschen";
+}
+
+<h3>Wollen Sie das Modul wirklich löschen?</h3>
+<div>
+    <h4>Modul</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bezeichnung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bezeichnung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lehrer.Vorname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lehrer.Vorname)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Löschen" class="btn btn-default" /> |
+            @Html.ActionLink("Zurück", "Index")
+        </div>
+    }
+</div>

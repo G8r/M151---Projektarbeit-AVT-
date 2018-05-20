@@ -1,0 +1,39 @@
+﻿@model AbsenzenVerwaltungsTool.Models.Schueler
+
+@{
+    ViewBag.Title = "Details";
+}
+<div>
+    <h4>Schueler Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vorname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vorname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nachname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nachname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Klasse.Bezeichnung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Klasse.Bezeichnung)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Berabeiten", "Edit", new { id = Model.schueler_id }) |
+    @Html.ActionLink("Zurück", "Index")
+</p>

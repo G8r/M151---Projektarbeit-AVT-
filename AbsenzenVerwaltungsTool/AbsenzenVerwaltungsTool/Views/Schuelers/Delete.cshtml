@@ -1,0 +1,46 @@
+﻿@model AbsenzenVerwaltungsTool.Models.Schueler
+
+@{
+    ViewBag.Title = "Schüler löschen";
+}
+
+<h3>Wollen Sie den Schüler wirklich löschen?</h3>
+<div>
+    <h4>Schueler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vorname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vorname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nachname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nachname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Klasse.Bezeichnung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Klasse.Bezeichnung)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Löschen" class="btn btn-default" /> |
+            @Html.ActionLink("Zurück", "Index")
+        </div>
+    }
+</div>

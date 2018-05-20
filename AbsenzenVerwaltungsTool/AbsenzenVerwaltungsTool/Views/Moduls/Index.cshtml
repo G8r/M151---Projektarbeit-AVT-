@@ -1,0 +1,37 @@
+﻿@model IEnumerable<AbsenzenVerwaltungsTool.Models.Modul>
+
+@{
+    ViewBag.Title = "Module";
+}
+
+<p>
+    @Html.ActionLink("Neues Modul", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bezeichnung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lehrer.Nachname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bezeichnung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lehrer.Nachname)
+        </td>
+        <td>
+            @Html.ActionLink("Bearbeiten", "Edit", new { id=item.modul_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.modul_id }) |
+            @Html.ActionLink("Löschen", "Delete", new { id=item.modul_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AbsenzenDBModelStoreContainer" CdmEntityContainer="AbsenzenDBEntities">
+    <EntitySetMapping Name="Absenzs">
+      <EntityTypeMapping TypeName="AbsenzenDBModel.Absenz">
+        <MappingFragment StoreEntitySet="Absenz">
+          <ScalarProperty Name="absenz_id" ColumnName="absenz_id" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Lektionen" ColumnName="Lektionen" />
+          <ScalarProperty Name="modul_id" ColumnName="modul_id" />
+          <ScalarProperty Name="schueler_id" ColumnName="schueler_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klasses">
+      <EntityTypeMapping TypeName="AbsenzenDBModel.Klasse">
+        <MappingFragment StoreEntitySet="Klasse">
+          <ScalarProperty Name="klasse_id" ColumnName="klasse_id" />
+          <ScalarProperty Name="Bezeichnung" ColumnName="Bezeichnung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lehrers">
+      <EntityTypeMapping TypeName="AbsenzenDBModel.Lehrer">
+        <MappingFragment StoreEntitySet="Lehrer">
+          <ScalarProperty Name="lehrer_id" ColumnName="lehrer_id" />
+          <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+          <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moduls">
+      <EntityTypeMapping TypeName="AbsenzenDBModel.Modul">
+        <MappingFragment StoreEntitySet="Modul">
+          <ScalarProperty Name="modul_id" ColumnName="modul_id" />
+          <ScalarProperty Name="Bezeichnung" ColumnName="Bezeichnung" />
+          <ScalarProperty Name="lehrer_id" ColumnName="lehrer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schuelers">
+      <EntityTypeMapping TypeName="AbsenzenDBModel.Schueler">
+        <MappingFragment StoreEntitySet="Schueler">
+          <ScalarProperty Name="schueler_id" ColumnName="schueler_id" />
+          <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+          <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+          <ScalarProperty Name="klasse_id" ColumnName="klasse_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AbsenzenDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Klasse_Lehrer" TypeName="AbsenzenDBModel.Klasse_Lehrer" StoreEntitySet="Klasse_Lehrer">
+      <EndProperty Name="Klasse">
+        <ScalarProperty Name="klasse_id" ColumnName="klasse_id" />
+      </EndProperty>
+      <EndProperty Name="Lehrer">
+        <ScalarProperty Name="lehrer_id" ColumnName="lehrer_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
